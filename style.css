@@ -90,25 +90,29 @@ table {
 
 .dashboardMenu li {
     padding: 5px;
+    display: grid;
+grid-template-columns: 1fr 3fr;
+align-items: center;
 }
 
 .main {
     grid-column: 2 / span 1;
     display: grid;
-    grid-template-rows: 1fr 1fr 9fr;
+    grid-template-rows: 0.75fr 0.75fr 9fr;
 
 }
 
 .mainHeader {
     grid-row: 1/ span 1;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 4fr 1fr;
 }
 
 .mainUserDetails {
     grid-row: 2/ span 1;
     display: grid;
     grid-template-columns: 2fr 1fr;
+    padding:5px;
 }
 
 .uploadIcons>ul {
@@ -225,8 +229,8 @@ margin-right: 5px;
 
 .welcome {
     display: grid;
+    grid-template-columns: 1fr 7fr;
     grid-template-rows: 1fr 3fr;
-    grid-template-columns: 1fr 2fr;
 }
 
 .welcomeIcon {
@@ -254,4 +258,41 @@ margin-right: 5px;
     font-size:  large;
     align-self: end;
     margin: 10px;
+}
+
+button {
+    background-color: green;
+    border: none;
+    padding: 10px;
+    border-radius: 40%;
+    color: gainsboro;
+}
+
+.notifIcons {
+    display:grid;
+    grid-template-columns: 1fr 1fr 5fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.searchBar {
+    display:grid;
+    grid-template-columns: 30px 1fr;
+    align-items: center;
+}
+
+.notifIcons div {
+    justify-self: start;
+}
+
+.searchBar img {
+    align-self: center;
+}
+
+.searchBar input {
+    justify-self: start;
+}
+
+.uploadIcons ul {
+    justify-items: center;
 }
