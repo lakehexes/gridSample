@@ -51,7 +51,9 @@ table {
 
 /*#endregion*/
 
-
+:root {
+    --main-color: #005c29;
+}
 
 .container {
     display: grid;
@@ -61,7 +63,7 @@ table {
 }
 
 .dashboard {
-    background-color: green;
+    background-color: var(--main-color);
     padding: 10px;
     display: grid;
     grid-template-rows: 1fr 10fr;
@@ -75,7 +77,7 @@ table {
 .dashboardMenu {
     grid-row: 2 /span 1;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr;
 
 }
 
@@ -129,7 +131,7 @@ li {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 2fr 1fr;
-    border-top: solid 1px green;
+    border-top: solid 1px var(--main-color);
 }
 
 .projects {
@@ -189,9 +191,9 @@ grid-row: 2/ span 1;
 }
 .project.card {
     display: grid;
-    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     background-color: snow;
-    border-left: 15px solid green;
+    border-left: 15px solid var(--main-color);
 }
 
 .title {
@@ -222,7 +224,7 @@ grid-row: 2/ span 1;
     margin-left: 5px;
 margin-right: 5px;
     border: 0;
-    border-bottom: 1px solid green /* you may match this border with the right border of the <div>*/
+    border-bottom: 1px solid var(--main-color) /* you may match this border with the right border of the <div>*/
     
 }
 
@@ -255,16 +257,16 @@ margin-right: 5px;
 }
 
 .sectionTitle {
-    font-size:  large;
+    font-size: x-large;
     align-self: end;
     margin: 10px;
 }
 
 button {
-    background-color: green;
+    background-color: var(--main-color);
     border: none;
     padding: 10px;
-    border-radius: 40%;
+    border-radius: 55%;
     color: gainsboro;
 }
 
@@ -295,4 +297,20 @@ button {
 
 .uploadIcons ul {
     justify-items: center;
+}
+
+.trending .card {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 5px;
+}
+
+.trending .card img {
+    grid-column: 1/ span 1;
+    grid-row: 1/ span 2;
+}
+
+.accountIcon {
+    font-size: larger;
 }
